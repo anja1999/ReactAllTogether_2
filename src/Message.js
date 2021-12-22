@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Message = props => {
   
@@ -14,5 +15,11 @@ const Message = props => {
         </li>
   )
 }
+
+Message.propTypes = {
+  index: PropTypes.number.isRequired,
+  message: PropTypes.object.isRequired,
+  userNameToCompare: PropTypes.string.isRequired
+};
 
 export default Message;

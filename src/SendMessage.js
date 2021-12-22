@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SendMessage extends Component{
   state = {
@@ -42,5 +43,9 @@ class SendMessage extends Component{
     )
   }
 }
+
+SendMessage.propTypes = {
+  sendMessage: PropTypes.func.isRequired
+};
 
 export default SendMessage;

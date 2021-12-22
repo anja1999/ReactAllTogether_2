@@ -3,12 +3,7 @@ import SendMessage from './SendMessage';
 import PropTypes from 'prop-types';
 import Message from './Message';
 
-class ChatWindow extends Component{
-   static propTypes = {
-     messages : PropTypes.array.isRequired,
-     username : PropTypes.string.isRequired,
-     sendMessage : PropTypes.func.isRequired
-    };
+class ChatWindow extends Component{ 
   
   sendMessage =(message)=>{
     let newMessage = { username : this.props.username, text:message};
@@ -31,4 +26,11 @@ class ChatWindow extends Component{
     )
   }  
 }
+
+ChatWindow.propTypes = {
+     messages : PropTypes.array.isRequired,
+     username : PropTypes.string.isRequired,
+     sendMessage : PropTypes.func.isRequired
+    };
+
 export default ChatWindow;
